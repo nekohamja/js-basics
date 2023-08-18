@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Functions</title>
+</head>
+<body>
+    <script>
+
+        // add 7 to inputted number
+        function add7(number){
+            return number+7
+        }
+        let enterNumber = prompt('add 7 to any number! ');
+        alert(enterNumber + ' + 7 = ' + add7(Number(enterNumber)));
+
+
+
+        // multiply two inputted numbers
+        function multiply(number1,number2){
+            return number1 * number2
+        }
+        let enterNumber2 = prompt('multiply two numbers! \nenter first number: ');
+        let enterNumber3 = prompt('enter second number: ');
+        alert(enterNumber2 + ' * ' + enterNumber3 + ' = '+ multiply(Number(enterNumber2),Number(enterNumber3)));
+
+
+
+        // Capitalize the first letter of a word
+        function capitalize(word){
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+        let enterString = prompt('Capitalize the first letter of a word! ');
+        alert(capitalize(enterString));
+
+
+
+        // return last letter of a word 
+        function lastLetter(word){
+            return word.charAt(word.length-1);
+        }
+        let enterString2 = prompt('return the last letter of a word!  ');
+        alert(lastLetter(enterString2));
+
+    </script>
+</body>
+</html>
