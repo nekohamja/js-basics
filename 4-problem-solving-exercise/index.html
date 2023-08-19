@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Problem Solving</title>
+</head>
+<body>
+    <script>
+        // number divisible by 3 = Fizz
+        // number divisible by 5 = Buzz
+        // number divisible by both = FizzBuzz
+
+        function fizzBuzz(){
+            let input = document.querySelector(".userInput").value;
+            let result = document.querySelector(".result");
+            for (let i = 1; i <= input; i++) {
+                if(i % 3 === 0 && i % 5 === 0){
+                    console.log(i + " FizzBuzz"); 
+                    result.innerHTML += "<p>" + i + " <b>FizzBuzz</b></p>";
+                } 
+                else if(i % 3 === 0){
+                    console.log(i + " Fizz");
+                    result.innerHTML += "<p>" + i + " <b>Fizz</b></p>";
+                }
+                else if(i % 5 === 0){
+                    console.log(i + " Buzz");
+                    result.innerHTML += "<p>" + i + " <b>Buzz</b></p>";
+                }
+                else {
+                    console.log(i);
+                    result.innerHTML += "<p>" + i + "</p>";
+                }
+            }
+        }
+
+        function clearContent(){
+            document.querySelector(".result").innerHTML = "";
+        }
+
+    </script>
+
+    <div style="text-align: center;">
+        <h1>FizzBuzz!</h1>
+        <p>Enter the number you would like to FizzBuzz up to:</p>
+        <input class="userInput" type="text"  placeholder="ex. 12">
+        <button type="button" onclick="fizzBuzz()">Try it</button>
+        <button type="button" onclick="clearContent()">Reset</button>
+        <div class="result"></div>
+    </div>
+
+</body>
+</html>
